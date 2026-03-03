@@ -1,0 +1,54 @@
+import numpy as np
+
+# [cite: 134, 180, 201]
+class Perceptron:
+    def __init__(self, input_size, lr=0.1, epochs=20):
+        self.weights = np.zeros(input_size) # [cite: 138, 140, 427]
+        self.bias = 0 # [cite: 118, 155, 427]
+        self.lr = lr # [cite: 238, 397, 403]
+        self.epochs = epochs
+
+    def predict(self, x):
+        # Step: Score (z) = W*X + b [cite: 164, 348, 430]
+        z = np.dot(x, self.weights) + self.bias
+        # Step: Activation [cite: 175, 367, 430]
+        return 1 if z >= 0 else 0
+
+    def train(self, X, y):
+        for epoch in range(self.epochs):
+            total_error = 0
+            for i in range(len(X)):
+                y_hat = self.predict(X[i]) # [cite: 226, 430]
+                error = y[i] - y_hat # [cite: 228, 383, 431]
+                
+                if error != 0:
+                    # Update rule: W = W + lr * error * X [cite: 233, 393, 432]
+                    self.weights += self.lr * error * X[i]
+                    # Update rule: b = b + lr * error [cite: 235, 395, 435]
+                    self.bias += self.lr * error
+                    total_error += abs(error)
+            
+            # Agar error 0 ho jaye toh training jaldi rok sakte hain (Convergence) [cite: 441]
+            if total_error == 0:
+                break
+
+# Dataset Definitions [cite: 295, 325, 327]
+gates = {
+    "AND":  {"X": np.array([[0,0], [0,1], [1,0], [1,1]]), "y": np.array([0,0,0,1])},
+    "OR":   {"X": np.array([[0,0], [0,1], [1,0], [1,1]]), "y": np.array([0,1,1,1])},
+    "NAND": {"X": np.array([[0,0], [0,1], [1,0], [1,1]]), "y": np.array([1,1,1,0])},
+    "NOR":  {"X": np.array([[0,0], [0,1], [1,0], [1,1]]), "y": np.array([1,0,0,0])},
+    "XOR":  {"X": np.array([[0,0], [0,1], [1,0], [1,1]]), "y": np.array([0,1,1,0])}
+}
+
+# Training and Evaluation
+for gate_name, data in gates.items():
+    print(f"\n--- Training {gate_name} Gate ---")
+    p = Perceptron(input_size=2, lr=0.1)
+    p.train(data["X"], data["y"])
+    
+    # Results for Lab Task 3 & 4 [cite: 488, 489, 490, 491]
+    print(f"Final Weights: {p.weights}, Final Bias: {p.bias}")
+    print("Predictions:")
+    for x in data["X"]:
+        print(f"Input: {x} -> Predicted: {p.predict(x)}")
