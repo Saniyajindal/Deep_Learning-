@@ -1,59 +1,61 @@
-UCS761-Deep Learning 
-Saniya Jindal
-(102303183)
-# UCS761: Deep Learning Laboratory Solutions 🧠
+NAME->SANIYA JINDAL
+ROLL_NO->102303183
+# Deep Learning & Neural Networks: Scratch Portfolio 🧠
 
-This repository contains scratch-level implementations of Deep Learning concepts, starting from basic Linear Regression to advanced Vision Models (CNNs), developed as part of the **UCS761** course.
-
-## 🚀 Project Overview
-The goal of this lab series is to build and understand neural networks using only **NumPy** and **Pandas**, without relying on high-level libraries like PyTorch or TensorFlow.
+This repository is a collection of Deep Learning models and concepts implemented entirely from scratch using **NumPy** and **Pandas**. It tracks my progress from basic logic gates to complex digit classification.
 
 ---
 
-## 📂 Lab Modules
+## 🎓 Certifications & Core Learning
+To build a strong theoretical foundation, I completed the following modules from the **Deep Learning Specialization (Coursera)**:
+
+1. **Neural Networks and Deep Learning**: Focused on vectorization, cost functions, and manual backpropagation.
+2. **Improving Deep Neural Networks**: Learned about initialization, hyperparameter tuning, and gradient stability.
+
+---
+
+## 📂 Laboratory Assignments (UCS761)
+
+### 📍 Lab 1: Foundations of Logic
+- **Task:** Implementing basic Logic Gates (AND, OR, NOT, NAND) using single neurons.
+- **Concept:** Understanding how a linear boundary separates binary classes.
+
+### 📍 Lab 3: Linear & Logistic Basics
+- **Task:** Transitioning from simple logic to continuous predictions.
+- **Implementation:** Manual implementation of the **Perceptron** learning rule.
 
 ### 📍 Lab 4: Multiple Linear Regression
-- **Objective:** Predicting numeric values (Salary) using a single linear neuron.
-- **Key Concepts:** Mean Squared Error (MSE), Gradient Descent, Feature handling.
-- **Tools:** Python, NumPy, Pandas.
+- **Task:** Predicting numeric outcomes (e.g., Salary) using multiple input features.
+- **Concept:** Optimization via Gradient Descent and Mean Squared Error (MSE).
 
 ### 📍 Lab 5: Linear Estimation (Abalone Dataset)
-- **Objective:** Predicting the age of Abalone using physical measurements.
-- **Key Concepts:** Data Normalization ($Z$-score), Train-Test Split (80/20), systematic bias analysis.
-- **Dataset:** UCI Abalone Dataset.
+- **Task:** Estimating biological age using physical measurements.
+- **Key Feature:** Implementation of **Z-score Normalization** and 80/20 data splitting.
 
-### 📍 Lab 6: Learning to Bend (Non-Linear Regression)
-- **Objective:** Breaking the "linear" barrier by introducing hidden layers.
-- **Key Features:** - Implementation of **ReLU Activation**.
-  - 2-Layer Neural Network ($1 \to 10 \to 1$).
-  - Manual Backpropagation using the **Chain Rule**.
+### 📍 Lab 6: Learning to Bend (Non-Linearity)
+- **Task:** Modeling curved data patterns (e.g., Square Root growth).
+- **Implementation:** - Added a **Hidden Layer** (10 neurons).
+  - Implemented **ReLU Activation** to introduce non-linearity.
+  - Manual **Backpropagation** using the Chain Rule.
+
+
+[Image of a neural network with a hidden layer]
+
 
 ### 📍 Lab 7: From Neurons to Vision Models
-- **Objective:** Building a complete pipeline for Digit Classification (MNIST).
-- **Experiments:**
-  - **Dense vs. CNN:** Analysis of spatial hierarchy and parameter sharing.
-  - **Vanishing Gradient:** Comparison between **Sigmoid** and **ReLU** using Gradient Norms.
-  - **Optimizers:** Manual implementation of SGD.
-- **Data Splitting:** 70% Train, 15% Validation, 15% Test.
+- **Task:** Digit classification using the MNIST dataset.
+- **Experiments:** - Comparison of **Sigmoid vs. ReLU** using **Gradient Norms**.
+  - Analyzed why **Dense layers** fail on high-dimensional image data.
+  - Strict 70/15/15 data split (Train/Val/Test).
 
----
-
-## 📊 Key Visualizations
-Each lab includes plots to verify learning:
-* **Loss Curves:** Tracking the reduction of MSE/Cross-Entropy.
-* **Regression Lines:** Visualizing the "bend" in non-linear models.
-* **Gradient Norms:** Monitoring signal stability across deep layers.
 
 ---
 
 ## 🛠️ Tech Stack
-* **Language:** Python 3.x
-* **Libraries:** NumPy, Pandas, Matplotlib
-* **Environment:** Google Colab / Jupyter Notebook
+- **Languages:** Python
+- **Libraries:** NumPy (Matrix Calculus), Pandas (Data Cleaning), Matplotlib (Visualization)
+- **Environment:** Google Colab / Jupyter Notebook
 
 ---
-
-## 📝 How to Run
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+**Course:** UCS761 - Deep Learning  
+**Developed by:** SANIYA JINDAL
